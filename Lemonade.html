@@ -3,65 +3,68 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Combava</title>
-			<link rel="stylesheet" href="CSS/reset.css">
+		<title>David's Lemonade</title>
+		<link rel="stylesheet" href="CSS/reset.css">
 		<link rel="stylesheet" href="CSS/lemonade_mobile.css">
 		<link rel="stylesheet" href="CSS/lemonade_desktop.css">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Schoolbell&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
 		<header>
 			<img src="Images/logoDavids.png" alt="logo">
-			<h1>Combava</h1>
 			<nav>
 				<ul>
-					<li><a href="">Qui ?</a></li>
-					<li><a href="">Quoi ?</a></li>
-					<li><a href="">Où ?</a></li>
-					<li><a href="">Contact</a></li>
+					<li><a href="#Presentation">Qui ?</a></li>
+					<li><a href="#Arguments">Quoi ?</a></li>
+					<li><a href="#Carte">Où ?</a></li>
+					<li><a href="#Réseau">Contact</a></li>
 				</ul>
 			</nav>
-			<button name="inscription_button">Inscription</button>
+			<a href="#Formulaire"><button name="inscription_button">Inscription</button></a>
 		</header>
 
 		<main>
 			<!--Presentation-->
-			<section class="Presentation">
+			<section id="Presentation">
 				<h2>Qui sommes nous?</h2>
-				<img src="Images/background.jpg" alt="logo">
+				
 			</section>
 
 			<!--Arguments-->
-			<section class="Arguments">
+			<section id="Arguments">
 				<h2>Que faisons nous?</h2>
 				<article class="article1">
+						<h3>Titre</h3>
 						<img src="Images/lemon.png" alt="article1">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer diam neque, aliquam eget urna eget, fringilla consectetur lorem. Morbi vitae quam sit amet libero aliquam sodales. Integer pharetra ligula sed ligula pellentesque.</p>
 				</article>
 
-				<article class="article2">
+				<article id="article2">
+					<h3>Titre</h3>
 					<img src="Images/lemon.png" alt="article1">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer diam neque, aliquam eget urna eget, fringilla consectetur lorem. Morbi vitae quam sit amet libero aliquam sodales. Integer pharetra ligula sed ligula pellentesque.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer diam neque, aliquam eget urna eget, fringilla consectetur lorem. Morbi vitae quam sit amet libero aliquam sodales. Integer pharetra ligula sed ligula pellentesque.</p>
 				</article>
 
-				<article class="article3">
+				<article id="article3">
+					<h3>Titre</h3>
 					<img src="Images/lemon.png" alt="article1">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer diam neque, aliquam eget urna eget, fringilla consectetur lorem. Morbi vitae quam sit amet libero aliquam sodales. Integer pharetra ligula sed ligula pellentesque.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer diam neque, aliquam eget urna eget, fringilla consectetur lorem. Morbi vitae quam sit amet libero aliquam sodales. Integer pharetra ligula sed ligula pellentesque.</p>
 				</article>
 				<button name="plus_button">Voir plus</button>
 
 			</section>
 
 			<!--Carte-->
-			<section class="Carte">
+			<section id="Carte">
 				<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1txqcWcXrAae74z98buzqRV0TQANj_IE7" width="640" height="480"></iframe>
 			</section>
 
 			<!--Formulaire-->
-			<section class="Formulaire">
+			<section id="Formulaire">
 				<h2> Formulaire </h2>
 				<form>
-					<input type="text" name="nom" placeholder="Nom" autofocus required/>
+					<input type="text" name="nom" placeholder="Nom" required/>
 					<input type="text" name="prénom" placeholder="Prénom" required/>
 					<input type="email" name="email" placeholder="Email" required/>
 					<input type="tel" name="telephone" placeholder="Numéro téléphone" required/>
@@ -88,11 +91,21 @@
 				</form>
 			</section>
 
+			<hr></hr>
+
+			<!--Réseaux sociaux et infos-->
+			<section id="Réseau">
+				<a href=https://www.facebook.com/><img src="" alt="Facebook logo" ></a>
+				<a href=https://www.instagram.com/><img src="" alt="Instagram logo" ></a>
+				<a href=https://www.twitter.com/><img src="" alt="Twitter logo" ></a>
+			</section>
+
 		</main>
 
 		<footer>
-			<!--réseaux sociaux-->
-			<!--CGV et blabla-->
+			<p class="copyright">© 2020 Combava, Inc. All rights reserved.</p>
+			<a href="">Terms of use</a>
+			<a href="">Privacy policy</a>
 		</footer>
 
 

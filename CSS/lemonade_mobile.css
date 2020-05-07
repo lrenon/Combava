@@ -1,12 +1,47 @@
 /*CSS mobile*/
-@media screen and (max-width: 768px){
 
 /*Général*/
+body{
+   font-family: 'Open Sans', sans-serif;
+   color:black;
+}
+h1,h2,h3,h4,h5,h6{
+   font-family: 'Schoolbell', cursive;
+}
 
 /*Header*/
+header{
+   padding-top:5%;
+   text-align:center;
+}
+header img{
+   width:30%;
+   height: 20%;
+}
+nav{
+   padding-top:5%;
+   padding-bottom: 7%;
+}
+li{
+   display: inline-block;
+   padding-right: 3%;
+}
+li a{
+   text-decoration: none;
+}
 
 /*Main*/
-
-/*Footer*/
+main{
 
 }
+#Presentation{
+   background-image: url(../Images/background.jpg);
+   background-size: contain;
+   background-repeat: no-repeat;
+   height:1000px;
+}
+/*#Presentation img{
+   max-width: 100%;
+}*/
+
+/*Footer*/

@@ -1,47 +1,289 @@
 /*CSS mobile*/
+@media screen and (max-width: 980px){
 
-/*Général*/
-body{
-   font-family: 'Open Sans', sans-serif;
-   color:black;
-}
-h1,h2,h3,h4,h5,h6{
-   font-family: 'Schoolbell', cursive;
-}
+   /* ------------- Général ------------- */
+   body{
+     margin: 0;
+     padding: 0;
+     background: #f3f3f3;
+     color: #000000;
+     font-family: 'Open Sans', sans-serif;
+     font-size: 16px;
+   }
+   /* body::after{
+      content:"";
+      background-image: url(../Images/fruits.png);
+      background-size: 320px 181px;
+      background-repeat: repeat;
+      opacity:0.4;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+   } */
+   h1,h2,h3,h4,h5,h6{
+      font-family: 'Schoolbell', cursive;
+      font-size: 28px;
+   }
+   h3{
+      font-size: 20px;
+   }
+   a{
+      text-decoration: none;
+      color:black;
+   }
+   header,main,footer{
+      width:auto;
+      z-index: 3;
+   }
+   main, footer{
+      margin-top:0px;
+      padding:0% 7% 0% 7%;
+   }
 
-/*Header*/
-header{
-   padding-top:5%;
-   text-align:center;
-}
-header img{
-   width:30%;
-   height: 20%;
-}
-nav{
-   padding-top:5%;
-   padding-bottom: 7%;
-}
-li{
-   display: inline-block;
-   padding-right: 3%;
-}
-li a{
-   text-decoration: none;
-}
+   /* ------------- Header ------------- */
+   header{
+      background-color: #ffffff;
+   }
 
-/*Main*/
-main{
+   header img{
+      margin-top: -30px;
+      padding:0px 0px 10px 130px;
+      height:70px;
+   }
+
+   header li {
+      border-bottom: 0.1px black solid ;
+      border-left: transparent;
+      border-right: transparent;
+   }
+
+   /* ------------- Menu Burger ------------- */
+   #menuBurger{
+     display: block;
+     position: relative;
+     top: 30px;
+     left: 50px;
+
+     z-index: 1;
+
+     -webkit-user-select: none;
+     user-select: none;
+   }
+
+   #menuBurger a{
+     color: #232323;
+     transition: color 0.3s ease; /*animation transition slide*/
+   }
+
+   /*Apparence des noms du menu quand on les survolent*/
+   #menuBurger a:hover{
+     color: #ffa500;
+   }
+
+   #menuBurger input{
+     display: block;
+     width: 50px;
+     height: 35px;
+     position: absolute;
+     top: -7px;
+     left: -5px;
+
+     cursor: pointer;
+
+     opacity: 0; /* cache la checkbox */
+     z-index: 2; /* au dessus du menu hamburger */
+
+     -webkit-touch-callout: none;
+   }
+
+   /*Apparence du menu hamburger (trois étages)*/
+   #menuBurger span{
+     display: block;
+     width: 40px;
+     height: 4px;
+     margin-bottom: 10px;
+     position: relative;
+
+     background: #232323;
+     border-radius: 3px;
+     z-index: 1;
+
+     transform-origin: 4px 0px; /*origine de la transition*/
+     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                 background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                 opacity 0.55s ease;
+   }
+
+   #menuBurger span:first-child{
+     transform-origin: 0% 0%;
+   }
+
+   #menuBurger span:nth-last-child(2){
+     transform-origin: 0% 100%;
+   }
+
+   /*Transforme deux étages du burger en croix*/
+   #menuBurger input:checked ~ span{
+     opacity: 1;
+     transform: rotate(45deg) translate(-1px, -1px);
+     background: #232323;
+   }
+
+   /*Cache la 2ème tranche du burger*/
+   #menuBurger input:checked ~ span:nth-last-child(3){
+     opacity: 0;
+     transform: rotate(0deg) scale(0.2, 0.2);
+   }
+
+   /*Une des tranches doit faire un rotation dans l'autre sens*/
+   #menuBurger input:checked ~ span:nth-last-child(2){
+     transform: rotate(-45deg) translate(2px, -3px);
+   }
+
+   /*Position en haut à gauche de l'écran*/
+   #menu{
+     position: absolute;
+     width: 35%;
+     margin: -150px 0 0 -50px;
+     padding: 60px;
+     padding-top: 27%;
+
+     background: #ededed;
+     font-size: 14px;
+     list-style-type: none;
+     -webkit-font-smoothing: antialiased;
+
+     transform-origin: 0% 0%;
+     transform: translate(-100%, 0);
+     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+   }
+
+   #menu li{
+      margin-top: 10px;
+      margin-left: 5%;
+      padding: 15px 0px 20px 0px;
+   }
+
+   #menu button {
+      margin-top: 15%;
+      margin-left: 5%;
+      padding: 10px;
+      border: black solid;
+      border-radius: 20px;
+      font-size: 14px;
+   }
+
+   /*Menu glisse depuis la gauche*/
+   #menuBurger input:checked ~ ul{
+     transform: none;
+   }
+
+   /* ------------- Main ------------- */
+
+   main{
+      padding-top: 30px;
+   }
+
+   /* ----- Arguments ----- */
+   article{
+      display:flex;
+      flex-direction: row;
+   }
+   article img{
+      width:60%;
+   }
+   article p{
+      padding-left:20px;
+      padding-top:20px;
+   }
+   #Arguments button{
+      margin-left:45%;
+      margin-bottom: 40px;
+      border: thin black solid;
+      border-radius: 20px;
+      font-size: 14px;
+   }
+
+   /* ----- Carte ----- */
+   #Carte iframe{
+      width:55%;
+   }
+
+   /* ----- Formulaire ----- */
+   #Formulaire+hr{
+      margin: 15px 0px 15px 0px;
+   }
+   #Formulaire .coordonnee{
+      display:block;
+      margin-bottom: 5px;
+   }
+
+
+   /* ----- Réseau ----- */
+   #Réseau{
+      text-align: center;
+      font-family:"Font Awesome 5 Brands";
+   }
+   #Réseau a:nth-child(2), #Réseau a:nth-child(3){
+      margin-left: 30px;
+   }
+
+   #Réseau i {
+   	position: relative;
+   	top: 2%;
+   	transform: translateY(calc(-50% - 1px));
+   }
+   #Réseau svg {
+   	position: relative;
+   	top: 20%;
+   }
+
+   #Réseau a{
+      display: inline-block;
+   	color: black;
+   	width: 40px;
+   	height: 40px;
+   	font-size: 20px;
+   	border-radius: 50%;
+   	border: 2px solid transparent;
+   	transition: all .3s;
+   }
+
+   #Réseau a:hover,#Réseau a:focus {
+	   border: 2px solid #504f4f;
+   }
+
+   #Réseau .lien-facebook:hover, #Réseau .lien-facebook:focus {
+   	color: #1338d6;
+   }
+   #Réseau .lien-instagram:hover, #Réseau .lien-instagram:focus {
+   	color: #e27c13;
+   }
+   #Réseau .lien-twitter:hover, #Réseau .lien-twitter:focus {
+   	color: #3bb1cb;
+   }
+
+   /* ------------- Footer ------------- */
+   footer{
+      color:#838383;
+      font-size: 12px;
+      text-align: center;
+      margin-bottom: 30px;
+   }
+
+   footer a:last-child{
+      padding-left: 20px;
+   }
+
+   footer p{
+      padding-bottom:5px;
+   }
+
+   footer a:hover{
+   	text-decoration: underline;
+   }
 
 }
-#Presentation{
-   background-image: url(../Images/background.jpg);
-   background-size: contain;
-   background-repeat: no-repeat;
-   height:1000px;
-}
-/*#Presentation img{
-   max-width: 100%;
-}*/
-
-/*Footer*/

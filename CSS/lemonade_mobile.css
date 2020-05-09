@@ -2,12 +2,13 @@
 @media screen and (min-width: 0px) and (max-width: 768px) {
 
     /* ------------- Général ------------- */
+
     body {
         margin: 0;
         padding: 0;
         background: #f3f3f3;
         color: #000000;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Schoolbell', cursive;
         font-size: 2.5vw;
     }
 
@@ -15,6 +16,7 @@
         font-family: 'Schoolbell', cursive;
         font-size: 1.5em;
         text-transform: uppercase;
+        font-weight:bold;
     }
 
     h1, h2 {
@@ -48,7 +50,7 @@
     header {
         background-color: #ffffff;
         height: auto;
-    }
+    }   
 
         header img {
             display: block;
@@ -71,6 +73,7 @@
             margin-top: -10%;
             margin-right: 4.5%;
             font-size: 1em;
+            font-family: 'Schoolbell', cursive;
             width: 20%
         }
 
@@ -242,6 +245,10 @@
             height: 20%;
         }
 
+    #article3 {
+        display: none;
+    }
+
     #Arguments button {
         display: block;
         margin: auto;
@@ -277,6 +284,7 @@
     }
 
     #Formulaire input, select {
+        font-family: 'Schoolbell', cursive;
         background-color: lightyellow;
         margin: 2% auto;
         border: 1px solid black;
@@ -284,12 +292,14 @@
         font-size: 1em;
     }
 
-    #mail, #tel, #nom, #prenom{
+    #mail, #tel, #nom, #prenom {
         width: 98%;
     }
+
     #ville {
         width: 99.5%;
     }
+
     #bouton {
         display: block;
         margin: auto;
@@ -347,11 +357,17 @@
         }
 
     /* ------------- Footer ------------- */
+    hr {
+        margin: 15px 0px 15px 0px;
+    }
+
     footer {
         color: #838383;
-        font-size: 12px;
+        font-size: 0.8em;
         text-align: center;
-        margin-bottom: 30px;
+        height: 450px;
+        background-image: url(../Images/background.jpg);
+        background-size: cover;
     }
 
         footer a:last-child {

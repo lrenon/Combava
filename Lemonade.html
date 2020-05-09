@@ -18,10 +18,10 @@
             <span></span>
             <span></span>
             <ul id="menu">
-                <a href="#"><li>Qui</li></a>
-                <a href="#"><li>Quoi</li></a>
-                <a href="#"><li>Où</li></a>
-                <a href="#"><li>Contact</li></a>
+                <a href="#Presentation"><li>Qui</li></a>
+                <a href="#Arguments"><li>Quoi</li></a>
+                <a href="#Carte"><li>Où</li></a>
+                <a href="#Réseau"><li>Contact</li></a>
                 <a href="https://Combava.com/" target="_blank"><li>More of Combava</li></a>
                 <!--<button name="inscription_button"><a href="#Formulaire">Inscription</a></button>-->
             </ul>
@@ -78,12 +78,12 @@
         <!--Formulaire-->
         <section id="Formulaire">
             <h2> Formulaire </h2>
-            <form>
-                <input class="coordonnee" type="text" name="nom" placeholder="Nom" required />
-                <input class="coordonnee" type="text" name="prénom" placeholder="Prénom" required />
-                <input class="coordonnee" type="email" name="email" placeholder="Email" required />
-                <input class="coordonnee" type="tel" name="telephone" placeholder="Numéro téléphone" required />
-                <select class="coordonnee" name="ville">
+            <form method="post" action="/">
+                <input id="nom" type="text" name="nom" placeholder="Nom" required />
+                <input id="prenom" type="text" name="prénom" placeholder="Prénom" required />
+                <input id="mail" type="email" name="email" placeholder="Email" required />
+                <input id="tel" type="tel" name="telephone" placeholder="Numéro téléphone" maxlength="10" required />
+                <select id="ville" name="ville">
                     <option value="" selected>--Choisissez un évènement--</option>
                     <option value="Grand Poitiers">Grand Poitiers</option>
                     <option value="Civray-de-Touraine">Civray-de-Touraine</option>
@@ -101,12 +101,12 @@
                     <option value="Paris">Paris</option>
                     <option value="Auxerre">Auxerre</option>
                 </select>
-                <input type="checkbox" name="info supplementaire" /><label>Souhaitez vous recevoir des informations supplémentaires par mail ?</label><br />
-                <input type="submit" value="Envoyer">
+                <input id="newsletter" type="checkbox" name="info supplementaire" /><label> Je m'inscris à la newsletter.</label><br />
+                <input id="bouton" type="submit" value="Envoyer">
             </form>
         </section>
 
-        <hr></hr>
+        <hr>
 
         <!--Réseaux sociaux-->
         <section id="Réseau">

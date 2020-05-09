@@ -1,5 +1,5 @@
 /*CSS mobile*/
-@media screen and (max-width: 980px){
+@media screen and (min-width: 0px){
 
    /* ------------- Général ------------- */
    body{
@@ -10,35 +10,30 @@
      font-family: 'Open Sans', sans-serif;
      font-size: 16px;
    }
-   /* body::after{
-      content:"";
-      background-image: url(../Images/fruits.png);
-      background-size: 320px 181px;
-      background-repeat: repeat;
-      opacity:0.4;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      z-index: -1;
-   } */
+
    h1,h2,h3,h4,h5,h6{
       font-family: 'Schoolbell', cursive;
       font-size: 28px;
    }
+
+   h1,h2{
+      text-align: center;
+   }
+
    h3{
       font-size: 20px;
    }
+
    a{
       text-decoration: none;
       color:black;
    }
+
    header,main,footer{
       width:auto;
-      z-index: 3;
    }
-   main, footer{
+
+   section, footer{
       margin-top:0px;
       padding:0% 7% 0% 7%;
    }
@@ -46,12 +41,18 @@
    /* ------------- Header ------------- */
    header{
       background-color: #ffffff;
+      height:auto;
    }
 
    header img{
-      margin-top: -30px;
-      padding:0px 0px 10px 130px;
-      height:70px;
+      display: flex;
+      position: relative;
+      top: 0px;
+      padding-bottom: 1%;
+      width:10%;
+      height:12%;
+      margin-top:-10%;
+      margin-left: 45%;
    }
 
    header li {
@@ -61,11 +62,14 @@
    }
 
    /* ------------- Menu Burger ------------- */
+
    #menuBurger{
      display: block;
      position: relative;
-     top: 30px;
-     left: 50px;
+     height:auto;
+     width:auto;
+     padding-top:4%;
+     padding-left:5%;
 
      z-index: 1;
 
@@ -85,11 +89,15 @@
 
    #menuBurger input{
      display: block;
-     width: 50px;
-     height: 35px;
+     width: 7%;
+     height: 60px;
      position: absolute;
-     top: -7px;
-     left: -5px;
+     top:0px;
+     left:0px;
+     right:0px;
+     bottom:0px;
+     margin-left:4.5%;
+     margin-top: 3%;
 
      cursor: pointer;
 
@@ -99,13 +107,13 @@
      -webkit-touch-callout: none;
    }
 
-   /*Apparence du menu hamburger (trois étages)*/
+   /*Apparence de l'icone menu hamburger (trois étages)*/
    #menuBurger span{
      display: block;
-     width: 40px;
-     height: 4px;
-     margin-bottom: 10px;
      position: relative;
+     width: 6%;
+     height: 3px;
+     margin-bottom: 2%;
 
      background: #232323;
      border-radius: 3px;
@@ -146,10 +154,14 @@
    /*Position en haut à gauche de l'écran*/
    #menu{
      position: absolute;
+     top:0px;
+     left:0px;
+     right:0px;
+     bottom:0px;
      width: 35%;
-     margin: -150px 0 0 -50px;
-     padding: 60px;
-     padding-top: 27%;
+     height:600%;
+     margin: 0px 0px 0px -50px;
+     padding: 10% 5% 10% 10%;
 
      background: #ededed;
      font-size: 14px;
@@ -183,22 +195,47 @@
 
    /* ------------- Main ------------- */
 
-   main{
-      padding-top: 30px;
+
+   /* ----- Présentation ----- */
+   #Presentation{
+      background-image: url("../Images/lemontree.jpg");
+      background-size: cover;
+      height:300px;
+      margin:0;
+      padding:0;
+   }
+   #Presentation .container{
+      position: relative;
+      background-color: rgba(223, 184, 16, 0.81);
+      padding:2% 7% 2% 7%;
+      margin: 0% 7% 0% 7%;
+      top:20%;
+      height:50%;
+      width:70%;
+      text-align: center;
+   }
+   #Presentation p{
+      padding-top:5%;
    }
 
    /* ----- Arguments ----- */
    article{
       display:flex;
       flex-direction: row;
+      font-size: 90%;
    }
+
+   article .text{
+      padding:20px 0px 20px 20px;
+      width:80%;
+   }
+
    article img{
-      width:60%;
+      width:20%;
+      height:20%;
+      padding-top:12%;
    }
-   article p{
-      padding-left:20px;
-      padding-top:20px;
-   }
+
    #Arguments button{
       margin-left:45%;
       margin-bottom: 40px;
@@ -216,6 +253,7 @@
    #Formulaire+hr{
       margin: 15px 0px 15px 0px;
    }
+
    #Formulaire .coordonnee{
       display:block;
       margin-bottom: 5px;
@@ -227,6 +265,7 @@
       text-align: center;
       font-family:"Font Awesome 5 Brands";
    }
+
    #Réseau a:nth-child(2), #Réseau a:nth-child(3){
       margin-left: 30px;
    }
@@ -236,6 +275,7 @@
    	top: 2%;
    	transform: translateY(calc(-50% - 1px));
    }
+
    #Réseau svg {
    	position: relative;
    	top: 20%;
@@ -259,9 +299,11 @@
    #Réseau .lien-facebook:hover, #Réseau .lien-facebook:focus {
    	color: #1338d6;
    }
+
    #Réseau .lien-instagram:hover, #Réseau .lien-instagram:focus {
    	color: #e27c13;
    }
+
    #Réseau .lien-twitter:hover, #Réseau .lien-twitter:focus {
    	color: #3bb1cb;
    }
@@ -279,6 +321,7 @@
    }
 
    footer p{
+      padding-top: 5px;
       padding-bottom:5px;
    }
 

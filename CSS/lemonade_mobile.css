@@ -1,5 +1,5 @@
 /*CSS mobile*/
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
 
     /* ------------- Général ------------- */
     body {
@@ -8,12 +8,12 @@
         background: #f3f3f3;
         color: #000000;
         font-family: 'Open Sans', sans-serif;
-        font-size: 16px;
+        font-size: 2.5vw;
     }
 
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Schoolbell', cursive;
-        font-size: 28px;
+        font-size: 1.5em;
         text-transform: uppercase;
     }
 
@@ -22,7 +22,7 @@
     }
 
     h3 {
-        font-size: 20px;
+        font-size: 1.3em;
     }
 
     a {
@@ -54,9 +54,9 @@
             display: block;
             margin: auto;
             padding-bottom: 1%;
-            width: 10%;
+            width: 15%;
             height: auto;
-            margin-top: -10%;
+            margin-top: -13%;
         }
 
         header li {
@@ -68,10 +68,10 @@
             border: black solid 2px;
             border-radius: 20px;
             float: right;
-            margin-top: -7%;
+            margin-top: -10%;
             margin-right: 4.5%;
-            font-size: 95%;
-            width: 15%
+            font-size: 1em;
+            width: 20%
         }
 
     /* ------------- Menu Burger ------------- */
@@ -81,7 +81,7 @@
         position: relative;
         height: auto;
         width: auto;
-        padding-top: 4%;
+        padding-top: 6%;
         padding-left: 5%;
         z-index: 1;
         -webkit-user-select: none;
@@ -119,7 +119,7 @@
         #menuBurger span {
             display: block;
             position: relative;
-            width: 6%;
+            width: 8%;
             height: 3px;
             margin-bottom: 2%;
             background: #232323;
@@ -167,7 +167,7 @@
         margin: 0px 0px 0px -50px;
         padding: 10% 5% 10% 10%;
         background: #ededed;
-        font-size: 14px;
+        font-size: 1em;
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
         transform-origin: 0% 0%;
@@ -224,7 +224,7 @@
     article {
         display: flex;
         flex-direction: row;
-        font-size: 90%;
+        font-size: 1em;
         margin: 7% 0%;
     }
 
@@ -249,12 +249,12 @@
         border: 2px black solid;
         border-radius: 20px;
         font-size: 95%;
-        width: 15%
+        width: 20%
     }
 
     /* ----- Carte ----- */
     #Carte iframe {
-        width: 55%;
+        width: 100%;
     }
 
     /* ----- Formulaire ----- */
@@ -271,30 +271,30 @@
         border: 2px solid black;
         border-radius: 20px 20px;
         padding: 2%;
-        width: 40%;
+        height: 60%;
         margin: auto;
+        font-size: 1em;
     }
 
     #Formulaire input, select {
         background-color: lightyellow;
         margin: 2% auto;
         border: 1px solid black;
+        padding: 2% 0% 2% 1%;
+        font-size: 1em;
     }
 
-    #nom, #prenom {
-        width : 48%;
-    }
-    #mail, #tel {
+    #mail, #tel, #nom, #prenom{
         width: 98%;
     }
     #ville {
-        width: 99%;
+        width: 99.5%;
     }
     #bouton {
         display: block;
         margin: auto;
         border-radius: 20px;
-        width: 20%
+        width: 40%
     }
 
 

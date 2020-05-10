@@ -18,15 +18,15 @@
             <span></span>
             <span></span>
             <ul id="menu">
-                <a href="#Presentation"><li>Qui ?</li></a>
-                <a href="#Arguments"><li>Quoi ?</li></a>
-                <a href="#Carte"><li>Où ?</li></a>
-                <a href="#Réseau"><li>Contact</li></a>
-                <a href="https://Combava.com/" target="_blank"><li>Combava</li></a>
+                <li><a href="#Presentation">Qui ?</a></li>
+                <li><a href="#Arguments">Quoi ?</a></li>
+                <li><a href="#Carte">Où ?</a></li>
+                <li><a href="#Réseau">Contact</a></li>
+                <li><a href="https://Combava.com/" target="_blank">Combava</a></li>
             </ul>
         </nav>
         <img src="Images/logoDavids.png" alt="logo">
-        <button name="inscription_button"><a href="#Formulaire">Inscription</a></button>
+        <a href="#Formulaire" class="inscription_button">Inscription</a>
     </header>
 
     <main>
@@ -34,19 +34,16 @@
         <section id="Presentation">
             <div class="container">
                 <h1>Qui sommes nous?</h1>
-                <p>
-                    Les stands David's Lemonade se remettent au gout du jour!
-                    Combava fait revenir ce concept populaire américain pour vous
-                    faire redécouvrir la citronnade, et ce, dans toute la France.
-                </p>
+                <p>David's Lemonade est de retour et c'est grâce à nous ! L'association <a href="https://Combava.com/">Combava</a>, regroupant des producteurs indépendants d'agrumes du sud de la France, vous propose de redécouvrir le plaisir d'une bonne limonade. Nous serons là pour vous accueillir, alors devenez VIP pour l'une de nos dégustations, <a href="#Formulaire">rejoignez-nous</a> !</p>
             </div>
 
         </section>
 
         <!--Arguments-->
+        <input type="checkbox" class="trigger" id="checkbox" />
         <section id="Arguments">
             <h1>Que faisons nous?</h1>
-            <article class="article1">
+            <article id="article1">
                 <img src="Images/degustation.jpg" alt="article1">
                 <div class="text">
                     <h2>Notre concept</h2>
@@ -69,9 +66,8 @@
                     <p>Producteurs locaux...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer diam neque, aliquam eget urna eget, fringilla consectetur lorem. Morbi vitae quam sit amet libero aliquam sodales. Integer pharetra ligula sed ligula pellentesque.</p>
                 </div>
             </article>
-            <button name="plus_button">Voir plus</button>
-
         </section>
+        <label for="checkbox" class="bouton"></label>
 
         <!--Carte-->
         <section id="Carte">
@@ -105,8 +101,8 @@
                     <option value="Paris">Paris</option>
                     <option value="Auxerre">Auxerre</option>
                 </select><br />
-                <input id="newsletter" type="checkbox" name="info supplementaire" /><label> Je souhaite être informé(e) par mail des nouveautés et prochains évènements.</label><br />
-                <input id="confidentialite" type="checkbox" name="info supplementaire" required/><label> J'ai lu et j'accepte les règles de confidentialité.</label><br />
+                <input id="newsletter" type="checkbox" name="info supplementaire" /><label> Je souhaite être informé(e) des nouveautés et prochains évènements.</label><br />
+                <input id="confidentialite" type="checkbox" name="info supplementaire" required /><label> J'ai lu et j'accepte les règles de confidentialité.</label><br />
                 <input id="button" type="submit" value="Envoyer">
             </form>
         </section>
@@ -117,9 +113,9 @@
     <footer>
         <!--Réseaux sociaux-->
         <section id="Réseau">
-            <a class="lien-facebook" href=https://www.facebook.com ><img src="Images/icon_facebook.png" alt="facebook" id="icon_facebook"></a>
-            <a class="lien-instagram" href=https://www.instagram.com ><img src="Images/icon_instagram.png" alt="instagram" id="icon_instagram"></a>
-            <a class="lien-twitter" href=https://www.twitter.com ><img src="Images/icon_twitter.png" alt="twitter" id="icon_twitter"></a>
+            <a class="lien-facebook" href=https://www.facebook.com><img src="Images/icon_facebook.png" alt="facebook" id="icon_facebook"></a>
+            <a class="lien-instagram" href=https://www.instagram.com><img src="Images/icon_instagram.png" alt="instagram" id="icon_instagram"></a>
+            <a class="lien-twitter" href=https://www.twitter.com><img src="Images/icon_twitter.png" alt="twitter" id="icon_twitter"></a>
         </section>
         <p class="copyright">© 2020 Combava. Tout droits réservés.</p>
         <a href="">Mentions Légales</a>

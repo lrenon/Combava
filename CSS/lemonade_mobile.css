@@ -8,7 +8,7 @@
         padding: 0;
         /* background: #f3f3f3; */
         color: #000000;
-        font-family: 'Schoolbell', cursive;
+        font-family: 'Schoolbell', cursive,'Open Sans', sans-serif;
         font-size: 2.5vw;
     }
 
@@ -66,19 +66,25 @@
             margin-top: -13%;
         }
 
-        header button {
+        header .inscription_button {
+            text-align: center;
             display: block;
             border: black solid 2px;
             border-radius: 20px;
-            float: right;
-            margin-top: -12%;
-            margin-right: 3.5%;
             font-size: 1em;
             font-family: 'Schoolbell', cursive;
             text-transform: uppercase;
             width: 20%;
             padding: 1% 0% 1% 0%;
+            background-color: #ededed;
+            float: right;
+            margin-top: -11%;
+            margin-right: 3.5%;
         }
+
+            header .inscription_button:hover {
+                background-color: #d2d9dd;
+            }
 
     /* ------------- Menu Burger ------------- */
 
@@ -147,7 +153,7 @@
         /*Transforme deux étages du burger en croix*/
         #menuBurger input:checked ~ span {
             opacity: 1;
-            transform: rotate(45deg) translate(-1px, -1px);
+            transform: rotate(45deg) translate(-2px, -1px);
             background: #232323;
         }
 
@@ -159,7 +165,7 @@
 
             /*Une des tranches doit faire un rotation dans l'autre sens*/
             #menuBurger input:checked ~ span:nth-last-child(2) {
-                transform: rotate(-45deg) translate(2px, -3px);
+                transform: rotate(-45deg) translate(0, -1px);
             }
 
     /*Position en haut à gauche de l'écran*/
@@ -216,51 +222,71 @@
 
     /* ----- Arguments ----- */
 
-    #Arguments article {
+    #Arguments #article1 {
         display: flex;
-        flex-direction: row;
         margin: 2% 0%;
         background-color: #ecf1f2;
     }
 
-        #Arguments article:nth-child(3) img {
-            order: 2;
-        }
+    #Arguments article:nth-child(3) img {
+        order: 2;
+    }
 
-        #Arguments article .text {
-            align-self: center;
-            padding: 2%;
-            text-align: justify;
-            flex: 1;
-        }
+    #Arguments article .text {
+        align-self: center;
+        padding: 2%;
+        text-align: justify;
+        flex: 1;
+    }
 
-        #Arguments article img {
-            width: 100%;
-            flex: 1;
-        }
+    #Arguments article img {
+        width: 100%;
+        flex: 1;
+    }
 
-    #Arguments button {
+    /*Bouton voir plus voir mois*/
+    .bouton {
         cursor: pointer;
         display: block;
         margin: auto;
-        background-color: white;
-        border: 2px black solid;
-        border-radius: 20px;
-        font-size: 95%;
+        padding: 1%;
         width: 20%;
-        transition-property: background-color, color;
-        transition-duration: 1s;
+        text-align: center;
+        font-size: 1em;
         font-family: 'Schoolbell', cursive;
+        background-color: #ededed;
+        border: 1px solid #ddd;
+        border-radius: 10%;
         text-transform: uppercase;
     }
 
-        #Arguments button:hover {
-            background-color: black;
-            color: white;
+        .bouton:hover {
+            background-color: #d2d9dd;
         }
 
-    #Arguments #article3 {
+    .trigger {
+        display: none; /*checkbox invisible*/
+    }
+
+    #Arguments #article2, #Arguments #article3 {
+        transition: .25s ease;
         display: none;
+    }
+
+    .trigger:checked ~ #Arguments #article2 {
+        display: flex;
+    }
+
+    .trigger:checked ~ #Arguments #article3 {
+        display: flex;
+    }
+
+    .trigger ~ .bouton:before {
+        content: 'Voir plus';
+    }
+
+    .trigger:checked ~ .bouton:before {
+        content: 'Voir moins';
     }
 
     /* ----- Carte ----- */
@@ -276,7 +302,12 @@
         margin: auto;
         font-size: 1em;
         border-radius: 8px;
+        border: 2px solid #c7cdcf;
     }
+
+        #Formulaire form #newsletter, #confidentialite {
+            margin: 3% auto;
+        }
 
     #Formulaire input, #Formulaire select {
         font-family: 'Schoolbell', cursive;
@@ -343,9 +374,6 @@
                 color: black;
                 width: 40px;
                 height: 40px;
-                /* border-radius: 50%;
-   	            border: 2px solid transparent;
-   	            transition: all .3s;*/
             }
 
                 footer #Réseau a img {
@@ -357,7 +385,6 @@
                 }
 
                 footer #Réseau a:hover, #Réseau a:focus {
-                    /* border: 2px solid #504f4f; */
                     opacity: 0.5;
                 }
 

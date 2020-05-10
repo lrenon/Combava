@@ -1,5 +1,5 @@
 /*CSS mobile*/
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
 
    /* ------------- Général ------------- */
 
@@ -11,18 +11,19 @@
      font-size: 2.5vw;
    }
 
-   h1,h2,h3,h4,h5,h6{
+   h1,h2{
       font-family: 'Schoolbell', cursive;
       font-size: 1.5em;
       text-transform: uppercase;
       font-weight:bold;
    }
 
-   h1,h2{
+   h1{
       text-align: center;
+      margin: 5% auto;
    }
 
-   h3{
+   h2{
       font-size: 1.3em;
    }
 
@@ -41,7 +42,7 @@
    }
 
    #Arguments, #Carte, #Formulaire{
-      margin-top: 5%;
+      margin: 5% auto;
    }
 
    hr{
@@ -65,18 +66,19 @@
    }
 
    header .inscription_button {
+      display: block;
       border: black solid 2px;
       border-radius: 20px;
-      text-align: center;
-      font-size: 1em;
-      font-family: 'Schoolbell', cursive;
-      background-color: #ededed;
-
       float: right;
       margin-top: -10%;
       margin-right: 3.5%;
+      font-size: 1em;
+      font-family: 'Schoolbell', cursive;
+      text-transform: uppercase;
       width: 20%;
-      padding:1% 0% 1% 0%;
+      padding: 1% 0% 1% 0%;
+      background-color: #ededed;
+      text-align: center;
    }
 
    header .inscription_button:hover {
@@ -188,6 +190,7 @@
      background: #ededed;
      box-shadow: 0px 0px 2px 2px #d7d7d7;
      font-size:1em;
+     text-transform: uppercase;
      list-style-type: none;
      -webkit-font-smoothing: antialiased;
 
@@ -212,47 +215,48 @@
    #Presentation{
       background-image: url("../Images/lemontree.jpg");
       background-size: cover;
-      height:300px;
+      height: auto;
+      padding: 4%;
    }
 
    #Presentation .container{
       position: relative;
       background-color: rgba(223, 184, 16, 0.81);
-      padding:2% 7% 2% 7%;
+      padding: 1% 7% 4% 7%;
       margin: auto;
-      top:20%;
-      height:50%;
-      width:70%;
+      top: 20%;
+      height: auto;
+      width: auto;
       text-align: center;
    }
 
-   #Presentation p{
-      padding-top:5%;
-   }
-
    /* ----- Arguments ----- */
-   #Arguments{
-      padding-top: 6%;
-   }
 
-   article{
-      display:flex;
+   #Arguments article {
+      display: flex;
       flex-direction: row;
-      padding: 4% 0% 4% 0%;
+      margin: 2% 0%;
+      background-color: #ecf1f2;
    }
 
-   article .text{
-      padding:20px 0px 20px 20px;
-      width:85%;
+   #Arguments article:nth-child(3) img {
+      order: 2;
    }
 
-   article img{
-      width:auto;
-      height:100%;
+   #Arguments article .text{
+      align-self: center;
+      padding: 2%;
+      text-align: justify;
+      flex: 1;
+   }
+
+   #Arguments article img {
+      width: 100%;
+      flex: 1;
    }
 
    /*Bouton voir plus/moins*/
-   .bouton{
+   .trigger{
       cursor: pointer;
       display: block;
       margin: auto;
@@ -266,32 +270,32 @@
       border-radius: 10%;
    }
 
-   .bouton:hover {
+   .trigger:hover {
       background-color: #d2d9dd;
    }
 
-   .trigger {
+   .button {
      display: none;/*checkbox invisible*/
    }
 
-   #article2, #article3 {
+   #Arguments #article2, #Arguments #article3 {
      transition: .25s ease;
      display:none;
    }
 
-   .trigger:checked ~ #Arguments #article2 {
+   .button:checked ~ #Arguments #article2 {
      display:flex;
    }
 
-   .trigger:checked ~ #Arguments #article3 {
+   .button:checked ~ #Arguments #article3 {
      display:flex;
    }
 
-   .trigger ~ .bouton:before {
+   .button ~ .trigger:before {
      content: 'Voir plus';
    }
 
-   .trigger:checked ~ .bouton:before {
+   .button:checked ~ .trigger:before {
      content: 'Voir moins';
    }
 
@@ -301,26 +305,18 @@
    }
 
    /* ----- Formulaire ----- */
-   #Formulaire{
-      margin-bottom: 5%;
-   }
-
-   #Formulaire+hr{
-      margin: 15px 0px 15px 0px;
-   }
-
-   #Formulaire h2{
-      margin-bottom: 2%;
-   }
 
    #Formulaire form {
       background-color: #ecf1f2;
       padding: 3%;
-      height: 60%;
       margin: auto;
       font-size: 1em;
       border-radius: 8px;
       border: 2px solid #c7cdcf;
+   }
+
+   #Formulaire form #newsletter, #Formulaire form #confidentialite{
+      margin:2%;
    }
 
    #Formulaire input, #Formulaire select {
@@ -353,6 +349,7 @@
    }
 
    #Formulaire #button{
+      cursor: pointer;
       display: block;
       margin: auto;
       text-align: center;
@@ -385,15 +382,7 @@
       margin-left: 30px;
    }
 
-   footer #Réseau i {
-   	position: relative;
-   	top: 2%;
-   	transform: translateY(calc(-50% - 1px));
-   }
-
    footer #Réseau img {
-   	position: relative;
-   	top: 20%;
       width:70%;
    }
 
@@ -410,11 +399,6 @@
 
    footer p+a+a{
       padding-left: 4%;
-   }
-
-   footer p{
-      padding-top: 5px;
-      padding-bottom:5px;
    }
 
    footer a:hover{

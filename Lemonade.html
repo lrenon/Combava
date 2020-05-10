@@ -18,15 +18,15 @@
             <span></span>
             <span></span>
             <ul id="menu">
-             	<a href="#"><li>Qui</li></a>
-             	<a href="#"><li>Quoi</li></a>
-             	<a href="#"><li>Où</li></a>
-             	<a href="#"><li>Contact</li></a>
-             	<a href="https://Combava.com/" target="_blank"><li>More of Combava</li></a>
+             	<li><a href="#Presentation">Qui</a></li>
+             	<li><a href="#Arguments">Quoi</a></li>
+             	<li><a href="#Carte">Où</a></li>
+             	<li><a href="#Réseau">Contact</a></li>
+             	<li><a href="https://Combava.com/" target="_blank">More of Combava</a></li>
             </ul>
         	</nav>
 		  	<img src="Images/logoDavids.png" alt="logo">
-			<button name="inscription_button"><a href="#Formulaire">Inscription</a></button>
+			<a href="#Formulaire" class="inscription_button">Inscription</a>
      	</header>
 
      	<main>
@@ -42,6 +42,7 @@
   			</section>
 
   			<!--Arguments-->
+			<input type="checkbox" class="trigger" id="checkbox"/>
   			<section id="Arguments">
   				<h2>Que faisons nous?</h2>
   				<article class="article1">
@@ -67,12 +68,13 @@
 						<p>Producteurs locaux...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer diam neque, aliquam eget urna eget, fringilla consectetur lorem. Morbi vitae quam sit amet libero aliquam sodales. Integer pharetra ligula sed ligula pellentesque.</p>
 					</div>
 				</article>
-  				<button name="plus_button">Voir plus</button>
 
   			</section>
+			<label for="checkbox" class="bouton"></label>
 
   			<!--Carte-->
   			<section id="Carte">
+				<h2>Où sommes nous?</h2>
   				<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1txqcWcXrAae74z98buzqRV0TQANj_IE7" width="640" height="480"></iframe>
   			</section>
 
@@ -80,30 +82,30 @@
   			<section id="Formulaire">
   				<form>
 					<h2> Formulaire </h2>
-	  					<input id="nom" type="text" name="nom" placeholder="Nom" required/>
-	  					<input id="prenom" type="text" name="prénom" placeholder="Prénom" required/>
-	  					<input id="mail" type="email" name="email" placeholder="Email" required/>
-	  					<input id="tel" type="tel" name="telephone" placeholder="Numéro téléphone" maxlength="10" required/>
-	  					<select id="ville" name="ville">
-	  						<option value="" selected>-- Choisissez un évènement --</option>
-	  						<option value="Grand Poitiers">Grand Poitiers</option>
-	  						<option value="Civray-de-Touraine">Civray-de-Touraine</option>
-	  						<option value="La Rochelle">La Rochelle</option>
-	  						<option value="Pompignac">Pompignac</option>
-	  						<option value="Arpajon-sur-Cère">Arpajon-sur-Cère</option>
-	  						<option value="Maringues">Maringues</option>
-	  						<option value="Biars-sur-Cère">Biars-sur-Cère</option>
-	  						<option value="Juvignac">Juvignac</option>
-	  						<option value="Le Beausset">Le Beausset</option>
-	  						<option value="Besançon">Besançon</option>
-	  						<option value="Wintzenheim">Wintzenheim</option>
-	  						<option value="Charleville-Mézières">Charleville-Mézières</option>
-	  						<option value="Amiens">Amiens</option>
-	  						<option value="Paris">Paris</option>
-	  						<option value="Auxerre">Auxerre</option>
-	  					</select><br/>
-	  					<input id="newsletter" type="checkbox" name="info supplementaire" /><label> Je m'inscris à la newsletter.</label><br/>
-	  					<input id="button" type="submit" value="Envoyer">
+					<input id="nom" type="text" name="nom" placeholder="Nom" required/>
+					<input id="prenom" type="text" name="prénom" placeholder="Prénom" required/>
+					<input id="mail" type="email" name="email" placeholder="Email" required/>
+					<input id="tel" type="tel" name="telephone" placeholder="Numéro téléphone" maxlength="10" required/>
+					<select id="ville" name="ville">
+						<option value="" selected>-- Choisissez un évènement --</option>
+						<option value="Grand Poitiers">Grand Poitiers</option>
+						<option value="Civray-de-Touraine">Civray-de-Touraine</option>
+						<option value="La Rochelle">La Rochelle</option>
+						<option value="Pompignac">Pompignac</option>
+						<option value="Arpajon-sur-Cère">Arpajon-sur-Cère</option>
+						<option value="Maringues">Maringues</option>
+						<option value="Biars-sur-Cère">Biars-sur-Cère</option>
+						<option value="Juvignac">Juvignac</option>
+						<option value="Le Beausset">Le Beausset</option>
+						<option value="Besançon">Besançon</option>
+						<option value="Wintzenheim">Wintzenheim</option>
+						<option value="Charleville-Mézières">Charleville-Mézières</option>
+						<option value="Amiens">Amiens</option>
+						<option value="Paris">Paris</option>
+						<option value="Auxerre">Auxerre</option>
+					</select><br/>
+					<input id="newsletter" type="checkbox" name="info supplementaire" /><label> Je m'inscris à la newsletter.</label><br/>
+					<input id="button" type="submit" value="Envoyer">
   				</form>
   			</section>
 

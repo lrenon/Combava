@@ -8,7 +8,7 @@
         /* background: #f3f3f3; */
         color: #000000;
         font-family: 'Schoolbell', cursive;
-        font-size: 1.8vw;
+        font-size: 1.5vw;
     }
 
     h1, h2 {
@@ -162,7 +162,7 @@
     #Formulaire form {
         background-color: #ecf1f2;
         padding: 0% 3%;
-        width: 80%;
+        width: 65%;
         margin: auto;
         font-size: 1em;
         border-radius: 8px;
@@ -178,7 +178,7 @@
             background-color: #e0e6e7;
             margin: 2% auto;
             border: 1px solid black;
-            padding: 2% 0% 2% 1%;
+            padding: 1% 0% 1% 1%;
             font-size: 1em;
             box-sizing: border-box;
             box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
